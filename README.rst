@@ -11,6 +11,17 @@ Ejemplo de Uso
 	//en el controlador
 	$this->menus = Load::model("menus")->find();
 
+	//tambien se puede paginar
+	$this->menus = Load::model("menus")->paginate("page: $pagina");
+
+	//si se usa el paginate, se mostrará el paginador en la tabla,
+	//no hay que hacer cambiar nada si se usa paginate ó find solo
+	//especificar la url en el paginador
+	//$dt->url("usuarios/index"); por ejemplo.
+	//la lib tiene una paginador por defecto pero se pueden usar los del fw
+	//$dt->typePaginator("paginators/digits")
+
+
 	//en la vista
 
 	//pasamos el resultado de la consulta al constructor de la clase
