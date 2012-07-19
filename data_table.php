@@ -324,6 +324,7 @@ class DataTable {
         $confirm = explode('|', $confirm);
         isset($action[1]) || $action[1] = $action[0];
         isset($text[1]) || $text[1] = $text[0];
+        isset($confirm[1]) || $confirm[1] = $confirm[0];
         $this->addFields(array(
             'field' => $this->_primary_key,
             'boolean_field' => $boolean_field,
